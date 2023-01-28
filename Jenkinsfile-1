@@ -7,7 +7,10 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                   withSonarQubeEnv('sq1') {
-                        bat "${scannerHome}/bin/sonar-scanner" 
+                    dir("client/"){
+                        bat 'npm install sonar-scanner'
+                        bat  'npm run sonar' 
+                    }    
                 }
             }
         }
