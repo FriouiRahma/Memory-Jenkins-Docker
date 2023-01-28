@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-             DOCKERHUB_CREDENTIALS = tool 'SonarQube Scanner'
+             DOCKERHUB_CREDENTIALS = tool 'SonarQube'
         }
     stages {
         stage('SonarQube analysis') {
