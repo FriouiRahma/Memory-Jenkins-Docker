@@ -1,14 +1,14 @@
 pipeline {
     agent any
      environment {
-             DOCKERHUB_CREDENTIALS = tool 'SonarQube'
+             scannerHome = tool 'SonarQube'
         }
     stages {
         stage('SonarQube analysis') {
             steps {
                   withSonarQubeEnv('sq1') {
                     dir("client/"){
-                        bat  'sonar-scanner' 
+                     bat "${scannerHome}/bin/sonar-scanner.bat" 
                     }    
                 }
             }
