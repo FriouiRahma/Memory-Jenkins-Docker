@@ -9,7 +9,7 @@ pipeline {
                   withSonarQubeEnv('sq1') {
                     dir("client/"){
                         bat 'npm install sonar-scanner'
-                        bat  'npm run sonar-scanner' 
+                        bat  'npm run  sq1' 
                     }    
                 }
             }
