@@ -13,7 +13,7 @@ pipeline {
                         -D sonar.password: admin \
                         -D sonar.projectKey=test-js \
                         -D sonar.sources=./src \
-                        -D sonar.test.inclusions"= **/*.test.tsx,**/*.test.ts \
+                        -D sonar.test.inclusions= **/*.test.tsx,**/*.test.ts \
                         -D sonar.projectName=test-react \
                         -D sonar.exclusions=  **/*.test.tsx \
                         -D sonar.projectVersion=1.0 \
