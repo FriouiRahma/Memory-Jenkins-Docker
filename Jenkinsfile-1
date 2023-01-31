@@ -11,7 +11,7 @@ pipeline {
                        bat """${scannerHome}/bin/sonar-scanner \
                         -Dsonar.projectKey=test-node-js \
                         -Dsonar.sources=. \
-                        -Dsonar.projectName=react_app \
+                        -Dsonar.projectName=react \
                         -Dsonar.projectVersion=1.0 \
                         -Dsonar.testExecutionReportPaths=test-reporter.xml
                         """
