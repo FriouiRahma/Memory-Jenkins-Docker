@@ -18,7 +18,7 @@ pipeline {
                          sonar.exclusions=  **/*.test.tsx \
                         sonar.projectVersion=1.0 \
                         sonar.testExecutionReportPaths=test-reporter.xml \
-                        sonar.analysis.mode=publish
+                        sonar.analysis.mode=publish \
                         "
                     }    
                 }
