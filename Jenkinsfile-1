@@ -15,7 +15,8 @@ pipeline {
                         -D sonar.sources=./src \
                         -D sonar.projectName=react \
                         -D sonar.projectVersion=1.0 \
-                        -D sonar.testExecutionReportPaths=test-reporter.xml
+                        -D sonar.testExecutionReportPaths=test-reporter.xml \
+                        -D sonar.analysis.mode=publish
                         """
                     }    
                 }
