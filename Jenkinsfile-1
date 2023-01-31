@@ -7,7 +7,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                   withSonarQubeEnv('sq1') {
-                    dir("client/"){
+                  
                        sh """${scannerHome}/bin/sonar-scanner \
                         -D sonar.login: admin \
                         -D sonar.password: admin \
@@ -18,7 +18,7 @@ pipeline {
                         -D sonar.testExecutionReportPaths=test-reporter.xml \
                         -D sonar.analysis.mode=publish
                         """
-                    }    
+                    
                 }
             }
         }
