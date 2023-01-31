@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('SonarQube analysis') {
             steps {
-                 dir("client/"){
+               
                   withSonarQubeEnv('sq1') {
                        bat """${scannerHome}/bin/sonar-scanner \
                         -D sonar.login: admin \
@@ -22,7 +22,7 @@ pipeline {
                          -D sonar.host.url=http://localhost:9000 \
                         """
                     }    
-                }
+                
             }
         }
     }
