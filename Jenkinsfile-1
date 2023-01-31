@@ -9,8 +9,10 @@ pipeline {
                   withSonarQubeEnv('sq1') {
                     dir("client/"){
                        bat """${scannerHome}/bin/sonar-scanner \
+                        -Dsonar.login": admin \
+                        -Dsonar.password: admin \
                         -Dsonar.projectKey=test-node-js \
-                        -Dsonar.sources=. \
+                        -Dsonar.sources=./src \
                         -Dsonar.projectName=react \
                         -Dsonar.projectVersion=1.0 \
                         -Dsonar.testExecutionReportPaths=test-reporter.xml
