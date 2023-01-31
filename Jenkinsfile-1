@@ -8,7 +8,7 @@ pipeline {
             steps {
                   withSonarQubeEnv('sq1') {
                   
-                       sh """${scannerHome}/bin/sonar-scanner \
+                       bat """${scannerHome}/bin/sonar-scanner \
                         -D sonar.login: admin \
                         -D sonar.password: admin \
                         -D sonar.projectKey=test-node-js \
