@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('SonarQube analysis') {
             steps {
+                 dir("client/"){
                   withSonarQubeEnv('sq1') {
-                    dir("client/"){
                        bat """${scannerHome}/bin/sonar-scanner \
                         -D sonar.login: admin \
                         -D sonar.password: admin \
