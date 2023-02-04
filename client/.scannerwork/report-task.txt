@@ -2,5 +2,5 @@ projectKey=mern-stack-client
 serverUrl=http://localhost:9000
 serverVersion=6.7.6.38781
 dashboardUrl=http://localhost:9000/dashboard/index/mern-stack-client
-ceTaskId=AYYEc0UdhIQyCpJzF3Tm
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYYEc0UdhIQyCpJzF3Tm
+ceTaskId=AYYbhvbHZNPPnXWiRIMH
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYYbhvbHZNPPnXWiRIMH
