@@ -27,11 +27,10 @@ pipeline {
    stage('SonarQube analysis') {
             steps {
                   dir("client/"){
+                    bat "npm i sonarqube-scanner"
                     bat "npm run sonar"
                   }
             }
         }
-
-
     }
 }
