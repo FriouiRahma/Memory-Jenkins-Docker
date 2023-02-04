@@ -5,7 +5,7 @@ pipeline {
              scannerHome = tool 'SonarQube'
         }
     node{
-    stages {
+
         stage('SonarQube analysis') {
             steps {
                 //   dir("client/"){
@@ -28,7 +28,7 @@ pipeline {
                     }    
                 
             }
-        }
+
     }
 }
 }
