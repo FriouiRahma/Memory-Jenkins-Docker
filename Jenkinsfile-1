@@ -1,3 +1,4 @@
+node{
 pipeline {
     agent any
      environment {
@@ -6,8 +7,11 @@ pipeline {
     stages {
         stage('SonarQube analysis') {
             steps {
+                //   dir("client/"){
+                //     bat "npm run sonar"
+                //   }
                   withSonarQubeEnv(installationName: 'sq1') {
-                       bat """${scannerHome}/bin/sonar-scanner \
+                       bat "${scannerHome}/bin/sonar-scanner.bat \
                         -D sonar.login: admin \
                         -D sonar.password: admin \
                         -D sonar.projectKey=test-js \
@@ -19,10 +23,12 @@ pipeline {
                         -D sonar.testExecutionReportPaths=test-reporter.xml \
                         -D sonar.analysis.mode=publish \
                          -D sonar.host.url=http://localhost:9000 \
-                        """
+                        "
                     }    
                 
             }
         }
     }
 }
+}
+
