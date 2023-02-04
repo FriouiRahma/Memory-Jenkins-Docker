@@ -1,9 +1,10 @@
-node{
+
 pipeline {
     agent any
      environment {
              scannerHome = tool 'SonarQube'
         }
+    node{
     stages {
         stage('SonarQube analysis') {
             steps {
