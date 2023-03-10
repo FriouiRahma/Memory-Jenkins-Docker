@@ -20,17 +20,17 @@ pipeline {
     
        stage('Push to DockerHub front') {
             steps {
-                bat "docker push $DOCKERHUB_CREDENTIALS_USR/client"
+                bat "docker push $DOCKERHUB_CREDENTIALS_USR/express-app"
       }
     }
 
-   stage('SonarQube analysis') {
-            steps {
-                  dir("client/"){
-                    bat "npm i sonarqube-scanner"
-                    bat "npm run sonar"
-                  }
-            }
-        }
+  //  stage('SonarQube analysis') {
+  //           steps {
+  //                 dir("client/"){
+  //                   bat "npm i sonarqube-scanner"
+  //                   bat "npm run sonar"
+  //                 }
+  //           }
+  //       }
     }
 }
